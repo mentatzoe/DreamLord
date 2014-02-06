@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: 864974976bb4a444ab2e80bcc539ed2c
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: topdown-nazi_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_9
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 343
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_14
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_17
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_18
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_19
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_20
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_21
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 218
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_24
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_25
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_26
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_27
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_28
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_29
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_30
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_31
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: topdown-nazi_32
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 93
+        width: 150
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
