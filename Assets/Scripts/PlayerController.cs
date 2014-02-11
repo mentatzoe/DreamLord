@@ -6,8 +6,23 @@ public class PlayerController : MonoBehaviour {
 	public float maxSp = 10f;
 	public float run = 10f;
 	public int runs = 1;
+    public int timer;
+    public bool playing = false;
+    public bool isClimbing;
+    public bool isMoveLeft;
+    public bool isMoveRight;
+    Climbing climbController;
+    Climbing leftController;
+    Climbing rightController;
 	// Use this for initialization
 	void Start () {
+        GameObject up = GameObject.Find("Up");
+        GameObject left = GameObject.Find("Left");
+        GameObject right = GameObject.Find("Right");
+        climbController = up.GetComponent<Climbing>();
+        leftController = left.GetComponent<Climbing>();
+        rightController = right.GetComponent<Climbing>();
+        timer = 0;
 	}
 
 	
@@ -37,29 +52,35 @@ public class PlayerController : MonoBehaviour {
 						Debug.Log ("trigger Win " + runs);
 						runs++;
 				}
-		}
-	
-
-	void FixedUpdate () {
-		float move = Input.GetAxis("Horizontal");
-		GameObject rc = GameObject.Find ("Right");
-		LeftCollider rightCollider = rc.GetComponent <LeftCollider> ();
-		
-		GameObject lc = GameObject.Find ("Left");
-		LeftCollider leftCollider = lc.GetComponent <LeftCollider> ();
-		
-		if (rightCollider.Colliding == true && move>=0){
-			//transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x+1,transform.position.y), maxSp);
-			rigidbody2D.velocity = new Vector2 (move*maxSp, rigidbody2D.velocity.y);
-		}
-		
-		if (leftCollider.Colliding == true && move<=0){
-			//transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x-50,transform.position.y), maxSp);
-			rigidbody2D.velocity = new Vector2 (move*maxSp, rigidbody2D.velocity.y);
-		}
-		
-
+        else if (coll.gameObject.tag == "climb")
+        {
+            playing = true;
+        }
 	}
+	
+	void FixedUpdate () {
+        float move = Input.acceleration.y;
+       // float move = Input.GetAxis("Horizontal");
+        isClimbing = climbController.isClimbing;
+        isMoveLeft = leftController.isClimbing;
+        isMoveRight = rightController.isClimbing;
+        //Debug.Log("Acceleration = " + move);
+        if (move < 0 && isMoveLeft && timer > 10)
+        {
+            //rigidbody2D.velocity = new Vector2 (move*maxSp, rigidbody2D.velocity.y);
+            transform.position = new Vector3(transform.position.x - 1.5f, transform.position.y);
+            timer = 0;
+        }
+        if (move > 0 && isMoveRight && timer > 10)
+        {
+            transform.position = new Vector3(transform.position.x + 1.5f, transform.position.y);
+            timer = 0;
+        }
+        if (isClimbing && transform.position.y < -1.1)
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.03f);
+        timer++;
+	}
+		
 
 	void OnBecameInvisible () {
 
