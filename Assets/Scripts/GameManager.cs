@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 
 	public void finishedMiniGame(){
 		DontDestroyOnLoad (this);
-		Application.LoadLevel ("MainRoom");
+		//Application.LoadLevel ("MainRoom");
 	}
 
 	public void finishGame(){

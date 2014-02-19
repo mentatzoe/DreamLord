@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/DragBlock.cs.meta
 guid: 89b16eb0dc500491a94ddcd4ce08f4ef
+=======
+guid: fa4e056b12be41747bcf4b0235e0868d
+>>>>>>> Movement stuff added & scrolling:Assets/Scripts/DragBlock.cs.meta
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
