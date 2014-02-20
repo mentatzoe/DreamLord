@@ -16,22 +16,17 @@ public class DragBlock : MonoBehaviour {
         {
             float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
             Vector3 pos_move = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
-            transform.position = new Vector3(pos_move.x, transform.position.y, pos_move.z);
+            transform.position = new Vector3(pos_move.x, pos_move.y, pos_move.z);
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("not sliding");
-        sliding = false;
+		if (other.tag=="player"){
+      		sliding = false;
+		}
     }
-
-    void OnTriggerExit(Collider other)
-    {
-        Debug.Log("trigger exit");
-        sliding = true;
-    }
-
+	
     void OnBecameInvisible()
     {
         Destroy(gameObject);

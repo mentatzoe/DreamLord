@@ -49,13 +49,14 @@ public class WordSpawn : MonoBehaviour {
             if (spawn)
             {
                 blockTypes.Add((GameObject)Resources.Load("box"), 30);
-                blockTypes.Add((GameObject)Resources.Load("CrackedBox"), 3);
-                //wordTypes.Add (wordGood(), 3);
+           //     blockTypes.Add((GameObject)Resources.Load("CrackedBox"), 3);
+				blockTypes.Add((GameObject)Resources.Load("DragBox"), 3);
+				//wordTypes.Add (wordGood(), 3);
                 //wordTypes.Add (wordBad(), 3);
                 GameObject word = WeightedRandomizer.From(blockTypes).TakeOne();
                 Instantiate(word);
                 int diffX = UnityEngine.Random.Range(0, 3);
-                int diffY = UnityEngine.Random.Range(0, 4);
+                int diffY = UnityEngine.Random.Range(0, 3);
                 word.transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
                 blockTypes.Clear();
             }
