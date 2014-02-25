@@ -47,7 +47,8 @@ public class PlayerController : MonoBehaviour {
         }
         else if (coll.gameObject.tag == "hazard")
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+            Destroy(coll.gameObject);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 1.0f, transform.position.z);
         }
         else if (coll.gameObject.tag == "helper")
         {
@@ -101,8 +102,8 @@ public class PlayerController : MonoBehaviour {
 		
 
 	void OnBecameInvisible () {
-
-		Debug.Log("invisible Win " + runs);
+        if (score > PlayerPrefs.GetInt("High Score"))
+            PlayerPrefs.SetInt("High Score", score);
 
 		if (runs == GameManager.TOTAL_RUNS) {
 			GameManager.Instance.finishedMiniGame ();
