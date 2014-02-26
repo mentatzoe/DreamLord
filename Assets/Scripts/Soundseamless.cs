@@ -6,7 +6,7 @@ public class Soundseamless : MonoBehaviour {
 	public AudioClip[] clips = new AudioClip[11];
 	private int rand;
 	private double nextEventTime;
-	private int flip = 0;
+	private int flip = 1;
 	private AudioSource[] audioSources = new AudioSource[11];
 	private bool running = false;
 	void Start() {
