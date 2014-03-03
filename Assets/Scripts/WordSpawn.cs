@@ -16,7 +16,7 @@ public class WordSpawn : MonoBehaviour
         renderer.enabled = false;
         blockTypes.Add((GameObject)Resources.Load("box"), 30);
         blockTypes.Add((GameObject)Resources.Load("CrackedBox"), 1);
-        blockTypes.Add((GameObject)Resources.Load("DragBox"), 5);
+        blockTypes.Add((GameObject)Resources.Load("DragBox"), 8);
         blockTypes.Add((GameObject)Resources.Load("ladder"), 2);
         blockTypes.Add((GameObject)Resources.Load("empty"), 1);
     }
@@ -27,7 +27,7 @@ public class WordSpawn : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.20f);
             if (spawn)
             {
                 /*

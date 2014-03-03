@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour {
 	}
 
     void OnMouseDown(){
+		audio.Play();
+		//for (int i=0; i==1000; i++){
+		//}
         Application.LoadLevel("DreamLord");
+
     }
 }

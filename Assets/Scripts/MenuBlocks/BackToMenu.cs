@@ -15,6 +15,7 @@ public class BackToMenu : MonoBehaviour {
 	
 	void OnMouseDown(){
 		Camera.main.transform.position = new Vector3(5, -1, -10);
+		audio.Play();
 	}
 }
 

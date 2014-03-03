@@ -4,14 +4,20 @@ public class DragBlock : MonoBehaviour {
     private Vector3 screenPoint;
     private Vector3 offset;
     private bool sliding;
+	private int soundcount;
 	// Use this for initialization
 	void Start () {
         sliding = true;
+		soundcount=0;
 	}
 
 
     void OnMouseDrag()
     {
+		if (soundcount==0){
+			audio.Play (0);
+		}
+		soundcount++;			          
         if (sliding)
         {
             float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;

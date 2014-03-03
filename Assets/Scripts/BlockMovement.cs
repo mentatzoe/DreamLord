@@ -12,7 +12,7 @@ public class BlockMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        fallSpeed = 0.05f;
+        fallSpeed = 0.03f;
         GameObject player = GameObject.Find("Character");
         controller = player.GetComponent<PlayerController>();
     }
@@ -29,7 +29,7 @@ public class BlockMovement : MonoBehaviour
         isClimbing = controller.isClimbing;
         score = controller.score;
         increase = score * 0.0005f;
-        fallSpeed = 0.05f + increase;
+        fallSpeed = 0.03f + increase;
         if (isClimbing)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed, transform.position.z);

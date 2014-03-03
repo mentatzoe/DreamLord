@@ -15,5 +15,6 @@ public class InstructionBlock : MonoBehaviour {
 	
 	void OnMouseDown(){
 		Camera.main.transform.position = new Vector3(-13, -1, -10);
+		audio.Play ();
 	}
 }

@@ -15,7 +15,7 @@ public class CameraMovement : MonoBehaviour {
         isClimbing = controller.isClimbing;
         if (!isClimbing && controller.playing)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y +0.05f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y +0.04f, transform.position.z);
         }
 	}
 }
