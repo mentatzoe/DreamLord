@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour {
 	private GameObject c;
 	private int endtimer;
 	private bool facingRight = true;
+	public AudioClip[] clips = new AudioClip[2];
+	private AudioSource[] audioSources = new AudioSource[2];
+
 	// Use this for initialization
 	void Start () {
 		c = GameObject.Find ("Main Camera");
@@ -32,6 +35,14 @@ public class PlayerController : MonoBehaviour {
         timer = 0;
 		anim = this.GetComponent<Animator> ();
 		endtimer = 0;
+		int i=0;
+		while (i < 2) {
+			GameObject child = new GameObject("audio");
+			child.transform.parent = gameObject.transform;
+			audioSources[i] = child.AddComponent("AudioSource") as AudioSource;
+			i++;
+		}
+
 	}
 
 	
@@ -53,6 +64,8 @@ public class PlayerController : MonoBehaviour {
         }
         else if (coll.gameObject.tag == "hazard")
         {
+			audioSources[1].clip = clips[1];
+			audioSources[1].Play();
             Destroy(coll.gameObject);
             transform.position = new Vector3(transform.position.x, transform.position.y - 1.0f, transform.position.z);
         }
@@ -60,7 +73,7 @@ public class PlayerController : MonoBehaviour {
         {
             playing = true;
             score++;
-            climbSpeed = climbSpeed * 2;
+            climbSpeed = climbSpeed * 4;
         }
 	}
 
@@ -68,7 +81,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (coll.gameObject.tag == "helper")
         {
-            climbSpeed = climbSpeed / 2;
+            climbSpeed = climbSpeed / 4;
         }
     }
 	
@@ -117,8 +130,10 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector2(0.1635f,-1.6489f);
 			rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, 0f);
 		}
-		audio.Play ();
-		endtimer = 250;
+		audioSources[0].clip = clips[0];
+		audioSources[0].Play();
+		endtimer = 200;
+		climbSpeed=0;
 
 	}
 

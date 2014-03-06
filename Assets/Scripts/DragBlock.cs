@@ -15,7 +15,7 @@ public class DragBlock : MonoBehaviour {
     void OnMouseDrag()
     {
 		if (soundcount==0){
-			audio.Play (0);
+			audio.Play ();
 		}
 		soundcount++;			          
         if (sliding)

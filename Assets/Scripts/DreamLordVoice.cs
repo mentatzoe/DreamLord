@@ -32,7 +32,11 @@ public class DreamLordVoice : MonoBehaviour {
 		return;
 	
 	if (delay==0){
-		flip++;
+		rand= Random.Range (0,16);
+		if (rand==flip){
+			rand=Random.Range (0,16);
+		}
+		flip=rand;
 		audioSources[flip].clip = clips[flip];
 		audioSources[flip].Play();		
 		delay = storage;

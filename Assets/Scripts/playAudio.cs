@@ -13,6 +13,8 @@ public class playAudio : MonoBehaviour {
 	
 	}
 
-	public void audioPlay(){
+
+	public void OnMouseDown(){
+		audio.Play();
 	}
 }
