@@ -16,6 +16,7 @@ public class Soundseamless : MonoBehaviour {
 			GameObject child = new GameObject("audio");
 			child.transform.parent = gameObject.transform;
 			audioSources[i] = child.AddComponent("AudioSource") as AudioSource;
+			audioSources[i].volume=.5f;
 			i++;
 		}
 		nextEventTime = AudioSettings.dspTime + 2.0F;

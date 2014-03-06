@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     Climbing rightController;
 	private Animator anim;
 	private GameObject c;
+	private int endtimer;
 	private bool facingRight = true;
 	// Use this for initialization
 	void Start () {
@@ -30,11 +31,16 @@ public class PlayerController : MonoBehaviour {
         rightController = right.GetComponent<Climbing>();
         timer = 0;
 		anim = this.GetComponent<Animator> ();
+		endtimer = 0;
 	}
 
 	
 	// Update is called once per frame
 	void Update(){
+		endtimer--;
+		if (endtimer == 0) {
+						endGame ();
+				}
 
 	}
 
@@ -111,7 +117,9 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector2(0.1635f,-1.6489f);
 			rigidbody2D.velocity = new Vector2 (rigidbody2D.velocity.x, 0f);
 		}
-        Application.LoadLevel("Menu");
+		audio.Play ();
+		endtimer = 250;
+
 	}
 
 	void Flip () {
@@ -119,4 +127,9 @@ public class PlayerController : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	void endGame(){
+		Application.LoadLevel("Menu");
+	}
 }
+

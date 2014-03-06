@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour {
 		audio.Play();
 		//for (int i=0; i==1000; i++){
 		//}
-        Application.LoadLevel("DreamLord");
+        Application.LoadLevel("DreamLord2");
 
     }
 }

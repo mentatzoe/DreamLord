@@ -22,6 +22,7 @@ public class CrackBlock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (clicks <= 0)
+		//				playAudio.audioPlay ();
             Destroy(gameObject); 
 	}
 }
