@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update(){
-		endtimer--;
-		if (endtimer == 0) {
-						endGame ();
-				}
+		//endtimer--;
+		//if (endtimer == 0) {
+		//	AutoFade.LoadLevel ("Menu", 3, 1, Color.black); 
+//		}
 
 	}
 
@@ -132,8 +132,10 @@ public class PlayerController : MonoBehaviour {
 		}
 		audioSources[0].clip = clips[0];
 		audioSources[0].Play();
-		endtimer = 200;
+		//endtimer = 1;
+		AutoFade.LoadLevel ("Menu", 3, 1, Color.black); 
 		climbSpeed=0;
+		endtimer = 1;
 
 	}
 
@@ -142,9 +144,5 @@ public class PlayerController : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-
-	void endGame(){
-		Application.LoadLevel("Menu");
 	}
-}
 
