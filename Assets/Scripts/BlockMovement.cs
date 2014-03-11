@@ -3,15 +3,26 @@ using System.Collections;
 
 public class BlockMovement : MonoBehaviour
 {
+	public Sprite sprite1;
+	public Sprite sprite2;
+	public Sprite sprite3;
+	public Sprite sprite4;
+	private Sprite[] spritelist = new Sprite[4];
     public int time;
     PlayerController controller;
     public bool isClimbing;
     public float fallSpeed;
     int score;
     float increase;
+	public bool isBox = false;
     // Use this for initialization
     void Start()
     {
+		if (isBox) {
+			spritelist = new Sprite[4]{this.sprite1,sprite2,sprite3,sprite4};
+			this.GetComponent<SpriteRenderer> ().sprite = spritelist [Random.Range (0, 3)];
+		}
+
         fallSpeed = 0.03f;
         GameObject player = GameObject.Find("Character");
         controller = player.GetComponent<PlayerController>();
