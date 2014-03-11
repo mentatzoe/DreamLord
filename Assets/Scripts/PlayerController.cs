@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-
+    private float move;
 	public float maxSp = 10f;
 	public float run = 10f;
 	public int runs = 1;
@@ -87,8 +87,10 @@ public class PlayerController : MonoBehaviour {
 	
 	void FixedUpdate () {
 		anim.SetBool ("side", false);
-       // float move = Input.acceleration.y;
-        float move = Input.GetAxis("Horizontal");
+        if (SystemInfo.supportsAccelerometer)
+            move = Input.acceleration.x;
+        else
+            move = Input.GetAxis("Horizontal");
         isClimbing = climbController.isClimbing;
         isMoveLeft = leftController.isClimbing;
         isMoveRight = rightController.isClimbing;
