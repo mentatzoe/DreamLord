@@ -96,19 +96,21 @@ public class PlayerController : MonoBehaviour {
         if (move < 0 && isMoveLeft && timer > 10)
         {
             //rigidbody2D.velocity = new Vector2 (move*maxSp, rigidbody2D.velocity.y);
-            transform.position = new Vector2(transform.position.x - 1.5f, transform.position.y);
+			StartCoroutine(MoveObject(this.transform, this.transform.position, new Vector2(transform.position.x - 1.5f, transform.position.y),0.19f));
+            //transform.position = new Vector2(transform.position.x - 1.5f, transform.position.y);
             timer = 0;
 			anim.SetBool ("side", true);
-		//	if (facingRight)
-		//		Flip ();
+			//if (facingRight)
+			//	Flip ();
         }
         if (move > 0 && isMoveRight && timer > 10)
         {
-            transform.position = new Vector2(transform.position.x + 1.5f, transform.position.y);
+            //transform.position = new Vector2(transform.position.x + 1.5f, transform.position.y);
             timer = 0;
 			anim.SetBool ("side", true);
-		//	if (!facingRight)
-		//		Flip ();
+			StartCoroutine(MoveObject(this.transform, this.transform.position, new Vector2(transform.position.x + 1.5f, transform.position.y), 0.19f));
+			//if (!facingRight)
+				//Flip ();
         }
 
 		//Debug.Log (c.transform.position.y - transform.position.y > -2);
@@ -144,5 +146,17 @@ public class PlayerController : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	IEnumerator MoveObject (Transform thisTransform, Vector2 startPos, Vector2 endPos, float time){
+		float i = 0.0f;
+		float rate = 1.0f/time;
+		while (i < 1.0f) {
+			i += Time.deltaTime * rate;
+			anim.SetFloat("horSpeed", i);
+			Debug.Log(anim.GetFloat("horSpeed"));
+			thisTransform.position = Vector2.Lerp(startPos, endPos, i);
+			yield return new WaitForFixedUpdate(); 
+		}
 	}
+}
 
