@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour {
         isMoveLeft = leftController.isClimbing;
         isMoveRight = rightController.isClimbing;
         //Debug.Log("Acceleration = " + move);
-        if (move < 0 && isMoveLeft && timer > 10)
+        if (move < 0 && isMoveLeft && timer > 10 && transform.position.x - 1.5 >= -4.782074)
         {
             //rigidbody2D.velocity = new Vector2 (move*maxSp, rigidbody2D.velocity.y);
 			StartCoroutine(MoveObject(this.transform, this.transform.position, new Vector2(transform.position.x - 1.5f, transform.position.y),0.19f));
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 			//if (facingRight)
 			//	Flip ();
         }
-        if (move > 0 && isMoveRight && timer > 10)
+        if (move > 0 && isMoveRight && timer > 10 && transform.position.x + 1.5 <= 0.4113746)
         {
             //transform.position = new Vector2(transform.position.x + 1.5f, transform.position.y);
             timer = 0;

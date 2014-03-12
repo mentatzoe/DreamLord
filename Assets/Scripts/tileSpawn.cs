@@ -52,6 +52,7 @@ public class tileSpawn : MonoBehaviour {
             spawn3(spawnRow);
             spawn4(spawnRow);
             spawnRow++;
+        }
             if (spawnRow > 3)
             {
                 spawnRow = 0;
@@ -80,7 +81,7 @@ public class tileSpawn : MonoBehaviour {
                     firstspawn = false;
                 }
             }
-        }
+        
 	}
 
     void spawn1(int row)
