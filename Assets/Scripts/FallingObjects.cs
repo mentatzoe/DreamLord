@@ -21,14 +21,22 @@ public class FallingObjects : MonoBehaviour {
 
     void Spawn()
     {
-        int rand = UnityEngine.Random.Range(0, 10);
+        int rand = UnityEngine.Random.Range(0, 8);
         if (rand == 2)
         {
+			rand = UnityEngine.Random.Range (0,3);
             Debug.Log("spawn called");
             GameObject fallingObject = (GameObject)Resources.Load("FallingObject");
-            Instantiate(fallingObject);
-            fallingObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
-        }
+			GameObject bonus = (GameObject)Resources.Load ("Bonus");
+			if (rand == 0){
+            	Instantiate(fallingObject);
+            	fallingObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
+       		}
+			if (rand == 1 || rand == 2){
+				Instantiate(bonus);
+				bonus.transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
+			}
 
     }
+}
 }

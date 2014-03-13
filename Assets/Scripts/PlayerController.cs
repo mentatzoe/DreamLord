@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour {
 	private GameObject c;
 	private int endtimer;
 	private bool facingRight = true;
-	public AudioClip[] clips = new AudioClip[2];
-	private AudioSource[] audioSources = new AudioSource[2];
+	public AudioClip[] clips = new AudioClip[3];
+	private AudioSource[] audioSources = new AudioSource[3];
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 		anim = this.GetComponent<Animator> ();
 		endtimer = 0;
 		int i=0;
-		while (i < 2) {
+		while (i < 3) {
 			GameObject child = new GameObject("audio");
 			child.transform.parent = gameObject.transform;
 			audioSources[i] = child.AddComponent("AudioSource") as AudioSource;
@@ -57,7 +57,14 @@ public class PlayerController : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D coll){
-        if (coll.gameObject.tag == "climb")
+		if (coll.gameObject.tag == "bonus")
+		{
+			audioSources[2].clip = clips[2];
+			audioSources[2].Play();
+			Destroy(coll.gameObject);
+		}
+		 
+        else if (coll.gameObject.tag == "climb")
         {
             playing = true;
             score++;
@@ -83,7 +90,10 @@ public class PlayerController : MonoBehaviour {
         {
             climbSpeed = climbSpeed / 4;
         }
+
     }
+
+
 	
 	void FixedUpdate () {
 		anim.SetBool ("side", false);

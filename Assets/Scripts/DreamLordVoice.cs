@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class DreamLordVoice : MonoBehaviour {
-	public AudioClip[] clips = new AudioClip[18];
+	public AudioClip[] clips = new AudioClip[14];
 	private int rand;
 	private int flip = 0;
-	private AudioSource[] audioSources = new AudioSource[18];
+	private AudioSource[] audioSources = new AudioSource[14];
 	private bool running = false;
 	public int delay = 60;
 	private int storage =0;
@@ -13,9 +13,8 @@ public class DreamLordVoice : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		storage = delay;
-		rand = Random.Range (0,9);
 		int i = 0;
-		while (i < 18) {
+		while (i < 14) {
 			GameObject child = new GameObject("audio");
 			child.transform.parent = gameObject.transform;
 			audioSources[i] = child.AddComponent("AudioSource") as AudioSource;
@@ -32,9 +31,9 @@ public class DreamLordVoice : MonoBehaviour {
 		return;
 	
 	if (delay==0){
-		rand= Random.Range (0,16);
+		rand= Random.Range (0,13);
 		if (rand==flip){
-			rand=Random.Range (0,16);
+			rand=Random.Range (0,13);
 		}
 		flip=rand;
 		audioSources[flip].clip = clips[flip];
