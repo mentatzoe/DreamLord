@@ -133,6 +133,7 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector3 (transform.position.x, transform.position.y + climbSpeed);
 		}
         timer++;
+		GameManager.score = this.score;
 	}
 		
 
