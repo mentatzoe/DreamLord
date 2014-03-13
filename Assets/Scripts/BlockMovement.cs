@@ -39,7 +39,7 @@ public class BlockMovement : MonoBehaviour
         time = controller.timer;
         isClimbing = controller.isClimbing;
         score = controller.score;
-        increase = score * 0.0004f;
+        increase = score * 0.0002f;
         fallSpeed = 0.01f + increase;
         if (isClimbing)
         {

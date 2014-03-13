@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
 			audioSources[1].clip = clips[1];
 			audioSources[1].Play();
             Destroy(coll.gameObject);
-            transform.position = new Vector3(transform.position.x, transform.position.y - 1.0f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z);
         }
         else if (coll.gameObject.tag == "helper")
         {
@@ -148,6 +148,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		audioSources[0].clip = clips[0];
 		audioSources[0].Play();
+		audioSources[0].volume = 1;
 		//endtimer = 1;
 		AutoFade.LoadLevel ("Menu", 3, 1, Color.black); 
 		climbSpeed=0;
