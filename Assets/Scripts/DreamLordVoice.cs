@@ -41,6 +41,7 @@ public class DreamLordVoice : MonoBehaviour {
 					if (rand==used[i]){
 						rand=Random.Range (0,22);
 						check = false;
+						i = 0;
 					}
 				}
 		}

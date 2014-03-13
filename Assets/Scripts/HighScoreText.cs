@@ -8,7 +8,7 @@ public class HighScoreText : MonoBehaviour {
 		"Memories can be your best dreams or your worse nightmares.",
 		"...To dream those dreams until the day we live them.",
 		"I'm suddenly finding it hard to know the difference between nightmares and consciousness",
-		"They've promised dreams can come true- but forget to mention that dreams are nightmares, too",
+		"They've promised dreams can come true- but nightmares are dreams as well.",
 		"You don't have to sleep, you don't have to dream, to have nightmares.",
 		"Are you sure you're awake?",
 		"The real nightmare begins when you wake up.",
