@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	private float stepGravity = 0;
 	private float newGrav = 0;
 	public static int TOTAL_RUNS = 1;
+	public static int score;
 	private int runs;
 	public bool connected = false;
 
@@ -56,5 +57,10 @@ public class GameManager : MonoBehaviour {
 		}
 		Physics2D.gravity = new Vector2 (0, newGrav);
 	
+		int units = score%10;
+		int dec = score/10%10;
+		int cent = score/100%10;
+		int mil = score/1000%10;
+		Debug.Log ("score is "+ mil + cent + dec + units );
 	}
 }
