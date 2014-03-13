@@ -10,7 +10,7 @@ public class Soundseamless : MonoBehaviour {
 	private AudioSource[] audioSources = new AudioSource[11];
 	private bool running = false;
 	void Start() {
-		rand = Random.Range (0,9);
+		rand = Random.Range (0, 10);
 		int i = 0;
 		while (i < 11) {
 			GameObject child = new GameObject("audio");
@@ -212,6 +212,28 @@ public class Soundseamless : MonoBehaviour {
 				if (flip==1){
 					audioSources[9].clip = clips[9];
 					audioSources[9].PlayScheduled(nextEventTime);
+				}
+				if (flip==2){
+					audioSources[2].clip = clips[2];
+					audioSources[2].PlayScheduled(nextEventTime);
+				}	
+				if (flip==3){
+					audioSources[4].clip = clips[4];
+					audioSources[4].PlayScheduled(nextEventTime);
+				}
+				if (flip==4){
+					audioSources[10].clip = clips[10];
+					audioSources[10].PlayScheduled(nextEventTime);
+				}
+			}
+			if (rand==9){
+				if (flip==0){
+					audioSources[0].clip = clips[0];
+					audioSources[0].PlayScheduled(nextEventTime);
+				}
+				if (flip==1){
+					audioSources[10].clip = clips[10];
+					audioSources[10].PlayScheduled(nextEventTime);
 				}
 				if (flip==2){
 					audioSources[2].clip = clips[2];

@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour {
 			GameObject child = new GameObject("audio");
 			child.transform.parent = gameObject.transform;
 			audioSources[i] = child.AddComponent("AudioSource") as AudioSource;
+			audioSources[i].volume=.8f;
+
 			i++;
 		}
 

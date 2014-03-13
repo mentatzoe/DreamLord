@@ -23,7 +23,7 @@ public class BlockMovement : MonoBehaviour
 			this.GetComponent<SpriteRenderer> ().sprite = spritelist [Random.Range (0, 3)];
 		}
 
-        fallSpeed = 0.03f;
+        fallSpeed = 0.01f;
         GameObject player = GameObject.Find("Character");
         controller = player.GetComponent<PlayerController>();
     }
@@ -39,8 +39,8 @@ public class BlockMovement : MonoBehaviour
         time = controller.timer;
         isClimbing = controller.isClimbing;
         score = controller.score;
-        increase = score * 0.0005f;
-        fallSpeed = 0.03f + increase;
+        increase = score * 0.0004f;
+        fallSpeed = 0.01f + increase;
         if (isClimbing)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed, transform.position.z);
