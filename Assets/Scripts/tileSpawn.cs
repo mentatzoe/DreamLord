@@ -36,7 +36,7 @@ public class tileSpawn : MonoBehaviour {
 	void Update () {
         isClimbing = controller.isClimbing;
         score = controller.score;
-        increase = score * 0.0005f;
+        increase = score * 0.00025f;
         fallSpeed = 0.05f + increase;
         if (isClimbing || !controller.playing)
             spawnDistance = spawnDistance - fallSpeed;

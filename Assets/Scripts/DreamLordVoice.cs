@@ -8,7 +8,10 @@ public class DreamLordVoice : MonoBehaviour {
 	private AudioSource[] audioSources = new AudioSource[23];
 	private bool running = false;
 	public int delay = 60;
+	private int counter = 0;
 	private int storage =0;
+	private bool check = false;
+	private int[] used = new int[23];
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +35,16 @@ public class DreamLordVoice : MonoBehaviour {
 	
 	if (delay==0){
 		rand= Random.Range (0,22);
-		if (rand==flip){
-			rand=Random.Range (0,22);
+		while (!check){
+				check = true;
+				for (int i=0; i<counter; i++){
+					if (rand==used[i]){
+						rand=Random.Range (0,22);
+						check = false;
+					}
+				}
 		}
+		used[counter] = rand;
 		flip=rand;
 		audioSources[flip].clip = clips[flip];
 		audioSources[flip].Play();		
